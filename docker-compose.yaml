@@ -1,0 +1,16 @@
+version: "1"
+services: 
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password123
+      POSTGRES_USER: user
+      POSTGRES_DB: db
+    ports:
+      - 5432:5432
+  app:
+    image: livredor-server
+    ports:
+      - 12000:3000
+
+
